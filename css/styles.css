@@ -1,8 +1,8 @@
 /* перемінні палітри кольорів */
 :root {
-  --overlay-bg-color:rgba(47, 48, 58, 0.4);
+  --overlay-bg-color: rgba(47, 48, 58, 0.4);
   --hero-bg-color: #c4c4c4;
-  
+
   --accent-color: #2196f3;
   --dark-text-color: #000;
   --light-text-color: #fff;
@@ -128,7 +128,7 @@ body {
   padding-bottom: 32px;
 
   transition-property: color;
-  transition: 250ms var(--timing-function) ;
+  transition: 250ms var(--timing-function);
 }
 
 .site-nav .link:hover,
@@ -137,18 +137,18 @@ body {
 .contact .link:focus,
 .site-nav .link.current {
   color: var(--accent-color);
-  }
+}
 
-.site-nav .link.current{
+.site-nav .link.current {
   position: relative;
 }
 
-.site-nav .link.current::after{
+.site-nav .link.current::after {
   position: absolute;
   left: 0;
   bottom: 0;
 
-  content: '';
+  content: "";
   height: 4px;
   width: 100%;
   display: block;
@@ -193,8 +193,12 @@ body {
   margin-left: auto;
   background-color: var(--hero-bg-color);
 
-  background-image: linear-gradient(to right, var(--overlay-bg-color), var(--overlay-bg-color)),
-    url('../images/hero-bg.jpg');
+  background-image: linear-gradient(
+      to right,
+      var(--overlay-bg-color),
+      var(--overlay-bg-color)
+    ),
+    url("../images/hero-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -305,7 +309,7 @@ body {
 .work-overlay {
   position: absolute;
   bottom: 0;
-  left:0;
+  left: 0;
   display: block;
   padding: 27px 0;
 
@@ -492,6 +496,48 @@ body {
 .bottom-s-link:focus {
   background-color: var(--accent-color);
 }
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 500px;
+  height: 500px;
+
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.close-btn {
+  position: absolute;
+  padding: 0;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
 
 /* --------------------------------- */
 /* портфоліо */
@@ -535,11 +581,11 @@ body {
   flex-basis: calc((100%- 2 * 30px) / 3);
   background-color: var(--main-bg-color);
 }
-.img-wraper{
+.img-wraper {
   position: relative;
   overflow: hidden;
 }
-.img-overlay{
+.img-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -553,24 +599,21 @@ body {
 
   font-weight: 400;
   font-size: 18px;
-  line-height:calc(28/18);
+  line-height: calc(28 / 18);
   letter-spacing: 0.03em;
   color: var(--light-text-color);
   background-color: rgba(33, 150, 243, 0.9);
 
-transition: 250ms var(--timing-function) ;
-
-
+  transition: 250ms var(--timing-function);
 }
-.img-description{
+.img-description {
   position: absolute;
   padding-left: 24px;
   padding-right: 24px;
-  
+
   /* max-width: 100%; */
   max-height: 100%;
-  overflow:auto;
-
+  overflow: auto;
 }
 /* заголовок картки портфоліо */
 .portfolio .card-title {
@@ -602,5 +645,4 @@ transition: 250ms var(--timing-function) ;
 .cards.list > .list-item:focus .img-overlay,
 .cards.list .link:focus .img-overlay {
   transform: translateY(0%);
-  
 }
