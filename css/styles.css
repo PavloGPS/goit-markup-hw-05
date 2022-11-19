@@ -524,7 +524,7 @@ body {
   visibility: hidden;
   pointer-events: none;
 
-  /* transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function); */
+  transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
 }
 .modal {
   position: absolute;
@@ -546,11 +546,8 @@ body {
 }
 .backdrop.is-hidden .modal {
   
-  scale: 0.2;
-  opacity: 0.2;
-
-  /* transition: scale 250ms var(--timing-function),
-    opacity 250ms var(--timing-function); */
+  transition: transform scale(0.9) 250ms var(--timing-function),
+    opacity(0.2) 250ms var(--timing-function);
 }
 .close-btn {
   position: absolute;
