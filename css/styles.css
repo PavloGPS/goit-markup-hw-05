@@ -530,7 +530,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  
 
   width: 528px;
   height: 581px;
@@ -540,13 +540,15 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transition: scale 250ms var(--timing-function),
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--timing-function),
     opacity 250ms var(--timing-function);
-  scale: 1;
+  
 }
 .backdrop.is-hidden .modal {
-  
-  transition: transform scale(0.9) 250ms var(--timing-function),
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: transform 250ms var(--timing-function),
     opacity(0.2) 250ms var(--timing-function);
 }
 .close-btn {
