@@ -522,7 +522,7 @@ body {
   visibility: hidden;
   pointer-events: none;
 
-  transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
+  /* transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function); */
 }
 .modal {
   position: absolute;
@@ -538,8 +538,8 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  /* transition: scale 250ms var(--timing-function),
-    opacity 250ms var(--timing-function); */
+  transition: scale 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
   scale: 1;
 }
 .backdrop.is-hidden .modal {
@@ -547,8 +547,8 @@ body {
   scale: 0.2;
   opacity: 0.2;
 
-  transition: scale 250ms var(--timing-function),
-    opacity 250ms var(--timing-function);
+  /* transition: scale 250ms var(--timing-function),
+    opacity 250ms var(--timing-function); */
 }
 .close-btn {
   position: absolute;
