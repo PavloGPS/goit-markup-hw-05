@@ -55,6 +55,9 @@ body {
 .link {
   text-decoration: none;
   color: inherit;
+
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function);
 }
 /* html{
   box-sizing: border-box;
@@ -127,8 +130,8 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  transition-property: color;
-  transition: 250ms var(--timing-function);
+  /* transition-property: color;
+  transition: 250ms var(--timing-function); */
 }
 
 .site-nav .link:hover,
@@ -233,6 +236,9 @@ body {
   border-radius: 4px;
   padding: 10px 32px;
   margin-top: 30px;
+
+  transition: background-color 250ms var(--timing-function);
+  box-shadow: none;
 }
 
 /* активний стан для кнопки */
@@ -417,7 +423,6 @@ body {
 /* логотип у посиланні */
 .customer-logo {
   fill: currentColor;
-  height: 60px;
 }
 .customer-link:hover,
 .customer-link:focus {
@@ -483,6 +488,7 @@ body {
   justify-content: center;
   width: 44px;
   height: 44px;
+
   border-radius: 50%;
   color: var(--light-s-icon-color);
   background-color: var(--dark-bg-icon-color);
@@ -504,6 +510,15 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 .modal {
   position: absolute;
@@ -518,6 +533,14 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transition: scale 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
+  scale: 1;
+}
+.backdrop.is-hidden .modal {
+  scale: 0.2;
+  opacity: 0.2;
 }
 .close-btn {
   position: absolute;
@@ -527,7 +550,7 @@ body {
 
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 
   width: 30px;
   height: 30px;
@@ -559,6 +582,10 @@ body {
   /* text-transform: capitalize; */
   cursor: pointer;
   padding: 6px 22px;
+
+  transition: background-color 250ms var(--timing-function),
+    color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
+  box-shadow: none;
 }
 /*кнопки фільтрів при наведенні та фокусі*/
 .portfolio .btn:hover,
@@ -580,6 +607,9 @@ body {
 .portfolio .list-item {
   flex-basis: calc((100%- 2 * 30px) / 3);
   background-color: var(--main-bg-color);
+
+  transition: box-shadow 250ms var(--timing-function);
+  box-shadow: none;
 }
 .img-wraper {
   position: relative;
@@ -604,7 +634,7 @@ body {
   color: var(--light-text-color);
   background-color: rgba(33, 150, 243, 0.9);
 
-  transition: 250ms var(--timing-function);
+  transition: transform 250ms var(--timing-function);
 }
 .img-description {
   position: absolute;
