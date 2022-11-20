@@ -151,6 +151,8 @@ body {
   left: 0;
   bottom: 0;
 
+  transform:translatey(1px);
+
   content: "";
   height: 4px;
   width: 100%;
